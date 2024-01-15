@@ -18,6 +18,8 @@ app.use((req, res, next) => {
 
 //routes
 app.use('/api/workouts', workoutRoutes)
+//The /api/workouts is fired, only then use the workoutRoutes routes (define URL), 
+//after that proceed to routes -> workout.js
 
 //connect to DB
 mongoose.connect(process.env.MONGO_URI)
